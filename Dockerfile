@@ -5,6 +5,7 @@ FROM nginx:${NGINX_VERSION}-alpine
 
 # Copia o arquivo de configuração nginx.conf personalizado para o contêiner
 COPY nginx/nginx.conf /etc/nginx/
+COPY nginx/mime.types /etc/nginx/mime.types
 
 # Atualiza e instala os pacotes necessários
 # certbot certbot-nginx são os responsáveis pela geração de HTTPS
